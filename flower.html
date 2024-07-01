@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Heart Design</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add styles for the blue heart */
+    .heart {
+      width: 200px;
+      height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 200px;
+      height: 300px; /* Adjust height to form a full heart shape */
+      background-color: #0077ff; /* Blue color */
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      left: -100px; /* Adjust left position to form left side of heart */
+      transform: rotate(-45deg);
+    }
+
+    .heart::after {
+      left: 100px; /* Adjust right position to form right side of heart */
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Thank You for Forgiving Me</h1>
+    <div class="heart"></div>
+    <p>This blue heart symbolizes my heartfelt apology.</p>
+  </div>
+</body>
+</html>
